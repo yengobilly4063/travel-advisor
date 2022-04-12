@@ -1,9 +1,9 @@
 import React from "react";
-import { Typography, Grid, CircularProgress, InputLabel, MenuItem, FormControl, Select } from "@material-ui/core";
+import { Typography, Grid, InputLabel, MenuItem, FormControl, Select } from "@material-ui/core";
 import useStyles from "./styles";
 import usePlaces from "./hooks/usePlaces";
 import PlaceDetails from "../place-details";
-import { IPlace } from "../shared/@types/places";
+import { IPlace } from "../../shared/@types/places";
 type Props = {
   places?: Partial<IPlace>[];
 };

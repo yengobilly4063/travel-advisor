@@ -4,7 +4,7 @@ import { Paper, Typography, useMediaQuery } from "@material-ui/core";
 import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
 import Rating from "@material-ui/lab";
 import useStyles from "./styles";
-import { Bounds, Coords } from "../shared/@types/bounds";
+import { Bounds, Coords } from "../../shared/@types/bounds";
 
 type Props = {
   coordinates?: Coords;

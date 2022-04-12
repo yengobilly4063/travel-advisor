@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Bounds } from "../../shared/@types/bounds";
+import { getPlacesData } from "../../../api";
+import { Bounds } from "../../../shared/@types/bounds";
 
 const usePlaces = () => {
   const [type, setType] = useState("restaurants");
@@ -7,8 +8,7 @@ const usePlaces = () => {
   const [places, setPlaces] = useState([]);
 
   const getPlaces = (bounds: Bounds) => {
-    console.log("getting places after being sure boounds is set", bounds);
-    // getPlacesData(bounds).then((data) => setPlaces(data));
+    getPlacesData(bounds).then((data) => setPlaces(data));
   };
 
   return { type, setType, rating, setRating, places, getPlaces };

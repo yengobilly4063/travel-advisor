@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Header from "./components/header";
 import Map from "./components/map";
-import PlaceDetails from "./components/place-details";
 import Places from "./components/places";
 import { CssBaseline, Grid } from "@material-ui/core";
-import useCoordinates from "./components/shared/hooks/useCoordinates";
+import useCoordinates from "./shared/hooks/useCoordinates";
 import usePlaces from "./components/places/hooks/usePlaces";
 
 const App = () => {
