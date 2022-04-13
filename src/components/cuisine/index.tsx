@@ -2,12 +2,12 @@ import { FC } from "react";
 import { Cuisine } from "../../shared/@types/places";
 import CuisineDetails from "./cuisine-details";
 type Props = {
-  cuisine?: Cuisine[];
+  cuisines?: Cuisine[];
 };
-const CuisineList: FC<Props> = ({ cuisine }) => {
+const CuisineList: FC<Props> = ({ cuisines }) => {
   return (
     <>
-      {cuisine?.map(({ name, key }) => (
+      {cuisines?.map(({ name, key }) => (
         <CuisineDetails key={key} name={name} />
       ))}
     </>

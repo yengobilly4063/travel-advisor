@@ -11,6 +11,10 @@ export type IPlace = {
       };
     };
   };
+  address?: string;
+  phone?: string;
+  website?: string;
+  web_url?: string;
   awards?: Award[];
   cuisine?: Cuisine[];
 };

@@ -16,7 +16,7 @@ const defaultImage =
 
 const PlaceDetails: React.FC<Props> = ({ place }) => {
   const classes = useStyles();
-  const { awards, cuisine } = place;
+  const { awards, cuisine: cuisines, address, phone, web_url, website } = place;
   return (
     <Card elevation={6}>
       <CardMedia
@@ -41,7 +41,25 @@ const PlaceDetails: React.FC<Props> = ({ place }) => {
           </Typography>
         </Box>
         {awards && <Awards awards={awards} />}
-        {cuisine && <CuisineList cuisine={cuisine} />}
+        {cuisines && <CuisineList cuisines={cuisines} />}
+        {address && (
+          <Typography gutterBottom variant="subtitle2" color="textSecondary" className={classes.subtitle}>
+            <LocationOnICon /> {address}
+          </Typography>
+        )}
+        {address && (
+          <Typography gutterBottom variant="subtitle2" color="textSecondary" className={classes.spacing}>
+            <PhoneICon /> {phone}
+          </Typography>
+        )}
+        <CardActions className={classes.right}>
+          <Button size="small" color="primary" onClick={() => window.open(web_url, "_blank")}>
+            Trip Advisor
+          </Button>
+          <Button size="small" color="primary" onClick={() => window.open(website, "_blank")}>
+            Website
+          </Button>
+        </CardActions>
       </CardContent>
     </Card>
   );
